@@ -89,11 +89,14 @@ public class WebFetchDataUtil {
 		return setParam(param, value);
 	}
 
-	public static String setUrl(String url){
-		interfaceUrl = new StringBuilder(url);
-		return interfaceUrl.toString();
-	}
-
+	/**
+	 * @param param
+	 * @param value
+	 * @return String
+	 * @date 2019-1-9 下午2:10:12
+	 * 若要设计多个参数 请先设置url值 在进行参数设值并拼接
+	 * 务必设参数步骤在connection之前完成
+	 */
 	public static String setParam(String param,Object value){
 		if(!interfaceUrl.toString().contains("?")){
 			interfaceUrl.append("?");
@@ -103,6 +106,11 @@ public class WebFetchDataUtil {
 		}else{
 			interfaceUrl.append("&").append(param).append("=").append(value.toString());
 		}
+		return interfaceUrl.toString();
+	}
+
+	public static String setUrl(String url){
+		interfaceUrl = new StringBuilder(url);
 		return interfaceUrl.toString();
 	}
 
