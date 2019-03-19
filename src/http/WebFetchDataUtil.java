@@ -1,3 +1,5 @@
+package http;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -10,7 +12,7 @@ import net.sf.json.JsonConfig;
 
 /**
  * 获取第三方接口数据帮助类
- * @class WebFetchDataUtil.java
+ * @class http.WebFetchDataUtil.java
  * @author fxb
  * @date 2019-1-9 下午1:45:26
  */

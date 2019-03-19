@@ -1,3 +1,5 @@
+package com.jdk.common.String;
+
 import java.lang.reflect.Field;
 
 public class TestStringFiledVariable {

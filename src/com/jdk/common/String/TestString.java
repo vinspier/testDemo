@@ -1,3 +1,5 @@
+package com.jdk.common.String;
+
 public class TestString {
     public static void main(String[] args) {
 
