@@ -10,7 +10,11 @@ package algorithm;
 
 public class TestTwentyOne {
     public static void main(String[] args) {
-        Double total = new Double(0.01D * 100);
-        System.out.println(total.intValue());
+        TwentyOne twentyOne = new TwentyOne(10,24);
+        System.out.println(twentyOne.getTime());
+        twentyOne.bet(twentyOne.getAmount(),0);
+        System.out.println(twentyOne.getAvaliable());
     }
+
+
 }
