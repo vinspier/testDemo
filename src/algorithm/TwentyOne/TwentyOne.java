@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.TwentyOne;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -39,17 +39,19 @@ public class TwentyOne {
     }
 
     public void bet(long amount,int index){
-        System.out.println("=================" + index);
         if(index == this.time){
-            available++;
-            leftData.add(amount);
+            if(amount != 0){
+                available++;
+                leftData.add(amount);
+            }
             return;
-        }else if (index < this.time){
+        }
+        if (index < this.time){
             if (amount < 1){
                 return;
             }
-            bet(--amount,index + 1);
-            bet(++amount,index + 1);
+            bet(amount - 1,index + 1);
+            bet(amount + 1,index + 1);
         }
     }
 

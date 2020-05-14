@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.TwentyOne;
 
 /**
  * @ClassName: TestTwentyOne
@@ -11,8 +11,8 @@ package algorithm;
 public class TestTwentyOne {
     public static void main(String[] args) {
         TwentyOne twentyOne = new TwentyOne(10,24);
-        System.out.println(twentyOne.getTime());
         twentyOne.bet(twentyOne.getAmount(),0);
+        twentyOne.getLeftData().stream().forEach((i)-> System.out.println(i));
         System.out.println(twentyOne.getAvaliable());
     }
 
